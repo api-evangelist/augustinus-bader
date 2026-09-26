@@ -1,23 +1,78 @@
 aid: augustinus-bader
+
 name: Augustinus Bader
-description: 'Augustinus Bader is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+description: 'Augustinus Bader is a luxury skincare brand founded by Dr. Augustinus Bader, a German stem cell researcher. The company combines scientific research with premium ingredients to create anti‑aging products such as the Rich Cream, The Cream, and The Elixir. Their website offers detailed product information, brand story, and a portal for professional partners. The brand is known for its advanced TFC8® technology and collaborations with high‑end fashion and hospitality partners.'
+
 url: https://raw.githubusercontent.com/api-evangelist/augustinus-bader/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-26 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-26'
+
 modified: '2026-09-26'
+
 tags:
 - Company
-apis: []
+- Skincare
+- Luxury
+- Beauty
+- Anti-Aging
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: SecurityTxt
+  url: well-known/augustinus-bader-clarity-security.txt
+- type: Security
+  url: https://clarity.com/vdp
+- type: LLMsTxt
+  url: llms/augustinus-bader-llms.txt
+- type: SecurityTxt
+  url: well-known/augustinus-bader-support-security.txt
+- type: WellKnown
+  url: well-known/augustinus-bader-well-known.yml
+- type: Hosts
+  url: hosts/augustinus-bader-hosts.yml
+- type: Vendors
+  url: vendors/augustinus-bader-vendors.yml
+- type: TermsOfService
+  url: https://augustinusbader.com/en-uk/pages/terms-and-conditions
+- type: Support
+  url: https://support.augustinusbader.com/en/
+- type: PrivacyPolicy
+  url: https://augustinusbader.com/en-uk/pages/privacy-policy
+- type: VulnerabilityDisclosure
+  url: security/augustinus-bader-vulnerability-disclosure.yml
+- type: DomainSecurity
+  url: security/augustinus-bader-domain-security.yml
 - type: Website
-  url: https://www.hiive.com/securities/augustinus-bader-stock
+  url: https://augustinusbader.com/en-uk
+
+apis: []
+
+x-coverage:
+  state: unreadable
+  reason: no-machine-readable-spec
+  detail: GraphQL endpoint returns schema but cannot verify ownership as it appears to be a generic Shopify API.
+  evidence:
+    - url: https://augustinusbader.com/api/graphql
+      status: 200
+  checked: 2026-09-26
+x-enrichment:
+  date: '2026-09-26'
+  status: enriched
+  artifacts_added: 11
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local
